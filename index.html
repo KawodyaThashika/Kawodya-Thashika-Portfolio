@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kawodya Thashika — Software Engineer Undergraduate portfolio.">
+  <title>Kawodya Thashika — Software Engineer</title>
+  <meta name="theme-color" content="#f2f3ef">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (function(){
+      try{
+        var saved = localStorage.getItem('kt-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      }catch(e){}
+    })();
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="custom-cursor"></div>
+
+  <!-- <div class="grain-cursor" id="cursorRing" aria-hidden="true">
+    <span class="cursor-coords" id="cursorCoords">X000 Y000</span>
+  </div> -->
+
+  <header class="site-header" id="siteHeader">
+    <div class="wrap nav-wrap">
+      <a class="logo" href="#home"><span class="logo-mark">&lt;/&gt;</span>KT</a>
+      <div class="header-actions">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><i class="bi bi-list"></i></button>
+      </div>
+      <nav id="navMenu">
+        <a href="#about"><span class="link-tag"></span>About</a>
+        <a href="#experience"><span class="link-tag"></span>Experience</a>
+        <a href="#skills"><span class="link-tag"></span>Skills</a>
+        <a href="#projects"><span class="link-tag"></span>Projects</a>
+        <a href="#education"><span class="link-tag"></span>Education</a>
+        <a class="nav-contact" href="#contact">Contact <i class="bi bi-arrow-up-right"></i></a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch between light and dark theme" title="Toggle theme">
+          <i class="bi bi-moon-stars" id="themeIcon"></i>
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero wrap" id="home">
+      <svg class="hero-schema" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <g class="schema-grid"></g>
+        <path class="trace trace-1" d="M -20 420 C 180 420, 220 300, 380 300 S 560 180, 720 180" />
+        <path class="trace trace-2" d="M -20 500 C 200 500, 260 420, 420 420 S 640 380, 900 380 S 1080 300, 1240 300" />
+        <path class="trace trace-3" d="M 720 180 C 850 180, 880 120, 1020 120 S 1180 80, 1240 80" />
+        <path class="trace trace-4" d="M 420 420 C 420 520, 500 560, 620 560 S 780 600, 900 600" />
+        <g class="node" transform="translate(380,300)"><circle r="5"/><text x="12" y="-10">UI</text></g>
+        <g class="node" transform="translate(720,180)"><circle r="5"/><text x="12" y="-10">API</text></g>
+        <g class="node" transform="translate(900,380)"><circle r="5"/><text x="12" y="-10">DB</text></g>
+        <g class="node" transform="translate(620,560)"><circle r="5"/><text x="12" y="18">OPS</text></g>
+      </svg>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> AVAILABLE FOR SOFTWARE ENGINEERING OPPORTUNITIES</p>
+          <h1>Building software<br><em>that works.</em></h1>
+          <p class="hero-intro">I'm Kawodya Thashika — a Software Technology undergraduate focused on full-stack development, enterprise systems, databases and practical problem solving.</p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="#projects">Explore my work <i class="bi bi-arrow-down-right"></i></a>
+            <a class="btn btn-light" href="assets/documents/Kawodya-Thashika-CV.pdf" target="_blank">Download CV <i class="bi bi-file-earmark-text"></i></a>
+          </div>
+
+          <div class="hero-stats">
+            <div><b>2</b><span>Internships completed</span></div>
+            <div><b>6+</b><span>Projects built</span></div>
+            <div><b>Full-stack</b><span>Frontend to database</span></div>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="card-top">
+            <span>DWG. 01 — PROFILE</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </div>
+          <div class="initials">KT</div>
+          <h2>Kawodya<br>Thashika</h2>
+          <p>Software Technology<br>University of Vocational Technology</p>
+
+          <div class="hero-tags">
+            <span>Java</span><span>Spring Boot</span><span>React</span><span>MySQL</span><span>REST APIs</span>
+          </div>
+
+          <div class="hero-social">
+            <a href="https://github.com/KawodyaThashika" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/kawodya-thashika/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:kawodyathashika@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+          </div>
+
+          <div class="availability"><span></span> Open to software engineering opportunities</div>
+        </aside>
+      </div>
+      <div class="scroll-note"><span>SCROLL TO EXPLORE</span><i class="bi bi-arrow-down"></i></div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="wrap split">
+        <div class="section-label">SEC. 01 / ABOUT</div>
+        <div class="about-content">
+          <h2 class="reveal">I enjoy turning ideas, requirements and problems into <span>useful software.</span></h2>
+          <p class="reveal">My experience includes enterprise insurance applications, system testing, SQL and database analysis, reporting, cloud environments and automation workflows. I work across frontend, backend and data layers and enjoy learning new technologies through real projects.</p>
+          <div class="about-points about-points-4">
+            <article class="reveal"><b>01</b><h3>Architecture</h3><p>Full-stack development across interfaces, APIs, business logic and database layers.</p></article>
+            <article class="reveal"><b>02</b><h3>Performance</h3><p>SQL query optimisation and database analysis focused on measurable results.</p></article>
+            <article class="reveal"><b>03</b><h3>Reliability</h3><p>System testing, debugging and production troubleshooting across environments.</p></article>
+            <article class="reveal"><b>04</b><h3>Delivery</h3><p>Automation workflows, technical documentation and reporting for real teams.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-label">SEC. 02 / EXPERIENCE</div><h2 class="reveal">Where I've worked.</h2></div>
+          <p class="reveal">Hands-on experience across software development, systems and customer-facing technology environments.</p>
+        </div>
+        <div class="experience-list">
+          <article class="experience-item reveal">
+            <div class="exp-number">01</div>
+            <div class="exp-main">
+              <div class="exp-meta"><span>Nov. 2025 — Present</span><span>On-site</span></div>
+              <h3>Intern Software Engineer</h3>
+              <h4>Arpico Insurance PLC</h4>
+              <ul>
+                <li>Developed and enhanced enterprise insurance applications using Java, JSP, Spring Boot, React and MySQL.</li>
+                <li>Performed system testing, debugging, SQL query optimization and database analysis.</li>
+                <li>Worked with Jasper Reports, GlassFish Server, Linux, Docker and cloud environments for deployment and troubleshooting.</li>
+                <li>Developed automation workflows using n8n and Apache Airflow for data processing and migration.</li>
+                <li>Created technical documentation, system analysis reports and workflow diagrams.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="experience-item reveal">
+            <div class="exp-number">02</div>
+            <div class="exp-main">
+              <div class="exp-meta"><span>Jul. 2024 — Oct. 2024</span><span>On-site</span></div>
+              <h3>Software Technology Intern</h3>
+              <h4>Sri Lanka Telecom PLC</h4>
+              <ul>
+                <li>Worked with billing and customer management systems in the SLT Teleshop environment.</li>
+                <li>Handled customer inquiries, bill operations, account updates and service-related requests.</li>
+                <li>Gained practical experience in cashier operations, system workflows and customer support.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-label">SEC. 03 / SKILLS</div><h2 class="reveal">My toolkit.</h2></div>
+          <p class="reveal">Technologies and engineering practices from my academic work, projects and professional experience.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="reveal"><span>01</span><i class="bi bi-code-slash"></i><h3>Languages</h3><p>Java · Python · JavaScript · C++ · C#</p></article>
+          <article class="reveal"><span>02</span><i class="bi bi-window"></i><h3>Web Development</h3><p>HTML · CSS · JavaScript · React</p></article>
+          <article class="reveal"><span>03</span><i class="bi bi-database"></i><h3>Databases</h3><p>MySQL · MongoDB · PostgreSQL</p></article>
+          <article class="reveal"><span>04</span><i class="bi bi-diagram-3"></i><h3>Software Engineering</h3><p>OOP · Design Patterns · SDLC · Agile Methodology</p></article>
+          <article class="reveal"><span>05</span><i class="bi bi-lightning-charge"></i><h3>Frameworks &amp; Tools</h3><p>Spring Boot · Node.js · Express · Tailwind CSS · Prisma · Supabase</p></article>
+          <article class="reveal"><span>06</span><i class="bi bi-cloud"></i><h3>Other Technologies</h3><p>Docker · Apache Superset · Airflow · Redis · Jasper Reports · GlassFish</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-label">SEC. 04 / PROJECTS</div><h2 class="reveal">Things I've built.</h2></div>
+          <p class="reveal">A selection of academic and independent projects showing my work across full-stack development, AI and business systems.</p>
+        </div>
+
+        <div class="filter-tabs" id="filterTabs" role="tablist" aria-label="Filter projects by category">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-tab" data-filter="full-stack" role="tab" aria-selected="false">Full-Stack</button>
+          <button class="filter-tab" data-filter="web-application" role="tab" aria-selected="false">Web Application</button>
+          <button class="filter-tab" data-filter="business-system" role="tab" aria-selected="false">Business System</button>
+        </div>
+
+        <div class="project-grid" id="projectGrid">
+          <article class="project-card featured reveal" data-category="full-stack">
+            <div class="project-index">01</div>
+            <div class="project-icon"><i class="bi bi-robot"></i></div>
+            <p>AI / FULL-STACK</p>
+            <h3>AI Code Reviewer</h3>
+            <p>AI-powered code review platform that analyzes source code, identifies issues and provides improvement suggestions.</p>
+            <div class="tags"><span>React</span><span>Node.js</span><span>Express.js</span><span>PostgreSQL</span><span>Prisma</span><span>OpenRouter API</span></div>
+          </article>
+          <article class="project-card reveal" data-category="web-application">
+            <div class="project-index">02</div>
+            <div class="project-icon"><i class="bi bi-receipt"></i></div>
+            <p>WEB APPLICATION</p>
+            <h3>Boarding Bill System</h3>
+            <p>Web-based boarding bill management system with authentication, bill tracking and an admin dashboard.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span><span>Cloud Firestore</span></div>
+          </article>
+          <article class="project-card reveal" data-category="full-stack">
+            <div class="project-index">03</div>
+            <div class="project-icon"><i class="bi bi-check2-square"></i></div>
+            <p>FULL-STACK</p>
+            <h3>To-Do Application</h3>
+            <p>Full-stack task management application with CRUD operations, REST APIs and a React frontend.</p>
+            <div class="tags"><span>React</span><span>Spring Boot</span><span>H2 Database</span></div>
+          </article>
+          <article class="project-card reveal" data-category="full-stack">
+            <div class="project-index">04</div>
+            <div class="project-icon"><i class="bi bi-chat-dots"></i></div>
+            <p>REAL-TIME APP</p>
+            <h3>Chat Application</h3>
+            <p>Real-time messaging application using Socket.io for instant communication and MySQL for message storage.</p>
+            <div class="tags"><span>Node.js</span><span>Express.js</span><span>Socket.io</span><span>MySQL</span></div>
+          </article>
+          <article class="project-card reveal" data-category="business-system">
+            <div class="project-index">05</div>
+            <div class="project-icon"><i class="bi bi-mortarboard"></i></div>
+            <p>BUSINESS SYSTEM</p>
+            <h3>Student Management System</h3>
+            <p>Web-based student management application with authentication, data management and reporting using MVC architecture.</p>
+            <div class="tags"><span>PHP</span><span>MySQL</span><span>MVC</span></div>
+          </article>
+          <article class="project-card reveal" data-category="business-system">
+            <div class="project-index">06</div>
+            <div class="project-icon"><i class="bi bi-people"></i></div>
+            <p>BUSINESS SYSTEM</p>
+            <h3>Employee Management System</h3>
+            <p>Employee management system covering employee records, payroll management and leave tracking.</p>
+            <div class="tags"><span>C#</span><span>SQL Server</span></div>
+          </article>
+        </div>
+        <p class="filter-empty" id="filterEmpty" hidden>No projects in this category yet.</p>
+      </div>
+    </section>
+
+    <section class="section education" id="education">
+      <div class="wrap split">
+        <div class="section-label">SEC. 05 / EDUCATION</div>
+        <div class="education-list">
+          <article class="reveal"><span>2023 — PRESENT</span><h3>B.Tech (Hons) in Software Technology</h3><p>University of Vocational Technology</p></article>
+          <article class="reveal"><span>2017 — 2021</span><h3>Technology Stream</h3><p>H/Weeraketiya Rajapaksha Central College</p><small>Z Score: 0.8760 · ICT – C · SFT – C · ET – C</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section certifications">
+      <div class="wrap">
+        <div class="section-label">SEC. 06 / CERTIFICATIONS</div>
+        <div class="cert-grid">
+          <div class="reveal"><b>Programming in Python</b><span>University of Moratuwa</span></div>
+          <div class="reveal"><b>Web Development</b><span>University of Moratuwa</span></div>
+          <div class="reveal"><b>FrontEnd Web Development</b><span>University of Moratuwa</span></div>
+          <div class="reveal"><b>React JS</b><span>Techiskole.lk</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-inner">
+        <div>
+          <div class="section-label">SEC. 07 / CONTACT</div>
+          <h2 class="reveal">Have a project<br>in mind?</h2>
+          <p class="reveal">Let's connect and build something useful.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:kawodyathashika@gmail.com"><span>Email</span><b>kawodyathashika@gmail.com</b><i class="bi bi-arrow-up-right"></i></a>
+          <a href="tel:+94767674827"><span>Phone</span><b>+94 76 767 4827</b><i class="bi bi-arrow-up-right"></i></a>
+          <a href="https://www.linkedin.com/in/kawodya-thashika/" target="_blank" rel="noopener"><span>LinkedIn</span><b>linkedin.com/in/kawodya-thashika</b><i class="bi bi-arrow-up-right"></i></a>
+          <a href="https://github.com/KawodyaThashika" target="_blank" rel="noopener"><span>GitHub</span><b>github.com/KawodyaThashika</b><i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> Kawodya Thashika. Designed and built by Kawodya Thashika.</span>
+      <div class="footer-links">
+        <a href="https://github.com/KawodyaThashika" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/kawodya-thashika/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="#home" aria-label="Back to top">Back to top <i class="bi bi-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
