@@ -158,10 +158,21 @@ interactiveElements.forEach((element) => {
 
   /* ---------- project filter tabs ---------- */
   var filterTabs = document.getElementById("filterTabs");
+  var activeFilter = "all";
   if(filterTabs){
     var tabs = filterTabs.querySelectorAll(".filter-tab");
-    var cards = document.querySelectorAll("#projectGrid .project-card");
     var emptyMsg = document.getElementById("filterEmpty");
+
+    var applyFilter = function(filter){
+      var cards = document.querySelectorAll("#projectGrid .project-card:not(.project-extra)");
+      var visibleCount = 0;
+      cards.forEach(function(card){
+        var match = filter === "all" || card.getAttribute("data-category") === filter;
+        card.classList.toggle("is-hidden", !match);
+        if(match) visibleCount++;
+      });
+      if(emptyMsg) emptyMsg.hidden = visibleCount !== 0;
+    };
 
     filterTabs.addEventListener("click", function(e){
       var btn = e.target.closest(".filter-tab");
@@ -173,14 +184,24 @@ interactiveElements.forEach((element) => {
       btn.classList.add("active");
       btn.setAttribute("aria-selected", "true");
 
-      var filter = btn.getAttribute("data-filter");
-      var visibleCount = 0;
-      cards.forEach(function(card){
-        var match = filter === "all" || card.getAttribute("data-category") === filter;
+      activeFilter = btn.getAttribute("data-filter");
+      applyFilter(activeFilter);
+    });
+  }
+
+  /* ---------- show more projects ---------- */
+  var loadMoreBtn = document.getElementById("loadMoreProjects");
+  if(loadMoreBtn){
+    loadMoreBtn.addEventListener("click", function(){
+      var extraCards = document.querySelectorAll("#projectGrid .project-card.project-extra");
+      extraCards.forEach(function(card){
+        card.classList.remove("project-extra");
+        var match = activeFilter === "all" || card.getAttribute("data-category") === activeFilter;
         card.classList.toggle("is-hidden", !match);
-        if(match) visibleCount++;
       });
-      if(emptyMsg) emptyMsg.hidden = visibleCount !== 0;
+      loadMoreBtn.textContent = "All projects shown";
+      loadMoreBtn.classList.add("is-done");
+      loadMoreBtn.disabled = true;
     });
   }
 
