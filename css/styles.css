@@ -1634,6 +1634,20 @@ a.project-card {
     margin-top: 32px;
 }
 
+#loadMoreProjects {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+#loadMoreProjects:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    transform: translate(-2px, -3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, .15);
+}
+
 .project-more .btn.is-done {
     opacity: .55;
     pointer-events: none;
