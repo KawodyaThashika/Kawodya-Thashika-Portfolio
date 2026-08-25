@@ -914,6 +914,19 @@ h4,
         sans-serif;
 }
 
+.initials img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    display: block;
+    border-radius: 5px;
+}
+
+.initials {
+    width: 130px;
+    height: 130px;
+}
+
 .hero-card h2 {
     position: relative;
 
@@ -1651,6 +1664,13 @@ a.project-card {
 .project-more .btn.is-done {
     opacity: .55;
     pointer-events: none;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+    border-radius: 5px;
 }
 
 .filter-empty {
