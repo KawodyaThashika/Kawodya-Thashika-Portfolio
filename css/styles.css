@@ -476,6 +476,30 @@ h4,
     opacity: .55;
 }
 
+.hero-3d {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    opacity: .85;
+
+    -webkit-mask-image: radial-gradient(circle at 62% 42%, rgba(0,0,0,1) 0%, rgba(0,0,0,.85) 45%, rgba(0,0,0,0) 78%);
+            mask-image: radial-gradient(circle at 62% 42%, rgba(0,0,0,1) 0%, rgba(0,0,0,.85) 45%, rgba(0,0,0,0) 78%);
+}
+
+@media (max-width: 860px) {
+  .hero-3d {
+    opacity: .55;
+  }
+}
+
 .hero-schema .trace {
     fill: none;
 
@@ -1090,6 +1114,44 @@ h4,
 
 .section {
     padding: 120px 0;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.contact {
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* =========================================================
+   SECTION LINE-FLOW (formal 3D wireframe threads)
+   A quiet, continuous set of thin 3D lines drifting behind the
+   copy of every content section (01–07). Kept small and subtle
+   so it reads as texture, not decoration.
+   ========================================================= */
+.section-lines-3d {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    z-index: 0;
+
+    opacity: .6;
+
+    pointer-events: none;
+}
+
+.section > .wrap,
+.contact > .wrap {
+    position: relative;
+    z-index: 1;
 }
 
 .split {
@@ -1109,6 +1171,25 @@ h4,
     letter-spacing: .1em;
 
     color: var(--accent);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.section-3d {
+    display: block;
+
+    width: 34px;
+    height: 34px;
+
+    flex: none;
+
+    opacity: .85;
+
+    pointer-events: none;
 }
 
 .dark-section .section-label,

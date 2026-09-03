@@ -56,17 +56,7 @@
 
   <main id="main-content">
     <section class="hero wrap" id="home">
-      <svg class="hero-schema" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-        <g class="schema-grid"></g>
-        <path class="trace trace-1" d="M -20 420 C 180 420, 220 300, 380 300 S 560 180, 720 180" />
-        <path class="trace trace-2" d="M -20 500 C 200 500, 260 420, 420 420 S 640 380, 900 380 S 1080 300, 1240 300" />
-        <path class="trace trace-3" d="M 720 180 C 850 180, 880 120, 1020 120 S 1180 80, 1240 80" />
-        <path class="trace trace-4" d="M 420 420 C 420 520, 500 560, 620 560 S 780 600, 900 600" />
-        <g class="node" transform="translate(380,300)"><circle r="5"/><text x="12" y="-10">UI</text></g>
-        <g class="node" transform="translate(720,180)"><circle r="5"/><text x="12" y="-10">API</text></g>
-        <g class="node" transform="translate(900,380)"><circle r="5"/><text x="12" y="-10">DB</text></g>
-        <g class="node" transform="translate(620,560)"><circle r="5"/><text x="12" y="18">OPS</text></g>
-      </svg>
+      <canvas class="hero-3d" id="hero3d" aria-hidden="true"></canvas>
 
       <div class="hero-grid">
         <div class="hero-copy">
@@ -113,8 +103,9 @@
     </section>
 
     <section class="section about" id="about">
+      <canvas class="section-lines-3d" aria-hidden="true"></canvas>
       <div class="wrap split">
-        <div class="section-label">SEC. 01 / ABOUT</div>
+        <div class="section-label">SEC. 01 / ABOUT<canvas class="section-3d" data-shape="octahedron" aria-hidden="true"></canvas></div>
         <div class="about-content">
           <h2 class="reveal">I enjoy turning ideas, requirements and problems into <span>useful software.</span></h2>
           <p class="reveal">My experience includes enterprise insurance applications, system testing, SQL and database analysis, reporting, cloud environments and automation workflows. I work across frontend, backend and data layers and enjoy learning new technologies through real projects.</p>
@@ -129,9 +120,10 @@
     </section>
 
     <section class="section dark-section" id="experience">
+      <canvas class="section-lines-3d" aria-hidden="true"></canvas>
       <div class="wrap">
         <div class="section-head">
-          <div><div class="section-label">SEC. 02 / EXPERIENCE</div><h2 class="reveal">Where I've worked.</h2></div>
+          <div><div class="section-label">SEC. 02 / EXPERIENCE<canvas class="section-3d" data-shape="torus" aria-hidden="true"></canvas></div><h2 class="reveal">Where I've worked.</h2></div>
           <p class="reveal">Hands-on experience across software development, systems and customer-facing technology environments.</p>
         </div>
         <div class="experience-list">
@@ -168,9 +160,10 @@
     </section>
 
     <section class="section skills" id="skills">
+      <canvas class="section-lines-3d" aria-hidden="true"></canvas>
       <div class="wrap">
         <div class="section-head">
-          <div><div class="section-label">SEC. 03 / SKILLS</div><h2 class="reveal">My toolkit.</h2></div>
+          <div><div class="section-label">SEC. 03 / SKILLS<canvas class="section-3d" data-shape="cubegrid" aria-hidden="true"></canvas></div><h2 class="reveal">My toolkit.</h2></div>
           <p class="reveal">Technologies and engineering practices from my academic work, projects and professional experience.</p>
         </div>
         <div class="skills-grid">
@@ -185,9 +178,10 @@
     </section>
 
     <section class="section projects" id="projects">
+      <canvas class="section-lines-3d" aria-hidden="true"></canvas>
       <div class="wrap">
         <div class="section-head">
-          <div><div class="section-label">SEC. 04 / PROJECTS</div><h2 class="reveal">Things I've built.</h2></div>
+          <div><div class="section-label">SEC. 04 / PROJECTS<canvas class="section-3d" data-shape="dodecahedron" aria-hidden="true"></canvas></div><h2 class="reveal">Things I've built.</h2></div>
           <p class="reveal">A selection of academic and independent projects showing my work across full-stack development, AI and business systems.</p>
         </div>
 
@@ -305,8 +299,9 @@
     </section>
 
     <section class="section education" id="education">
+      <canvas class="section-lines-3d" aria-hidden="true"></canvas>
       <div class="wrap split">
-        <div class="section-label">SEC. 05 / EDUCATION</div>
+        <div class="section-label">SEC. 05 / EDUCATION<canvas class="section-3d" data-shape="tetrahedron" aria-hidden="true"></canvas></div>
         <div class="education-list">
           <article class="reveal"><span>2023 — PRESENT</span><h3>B.Tech (Hons) in Software Technology</h3><p>University of Vocational Technology</p></article>
           <article class="reveal"><span>2017 — 2021</span><h3>Technology Stream</h3><p>H/Weeraketiya Rajapaksha Central College</p><small>Z Score: 0.8760 · ICT – C · SFT – C · ET – C</small></article>
@@ -315,8 +310,9 @@
     </section>
 
     <section class="section certifications">
+      <canvas class="section-lines-3d" aria-hidden="true"></canvas>
       <div class="wrap">
-        <div class="section-label">SEC. 06 / CERTIFICATIONS</div>
+        <div class="section-label">SEC. 06 / CERTIFICATIONS<canvas class="section-3d" data-shape="cone" aria-hidden="true"></canvas></div>
         <div class="cert-grid">
           <div class="reveal"><b>Programming in Python</b><span>University of Moratuwa</span></div>
           <div class="reveal"><b>Web Development</b><span>University of Moratuwa</span></div>
@@ -327,9 +323,10 @@
     </section>
 
     <section class="contact" id="contact">
+      <canvas class="section-lines-3d" data-variant="helix" aria-hidden="true"></canvas>
       <div class="wrap contact-inner">
         <div>
-          <div class="section-label">SEC. 07 / CONTACT</div>
+          <div class="section-label">SEC. 07 / CONTACT<canvas class="section-3d" data-shape="sphere" aria-hidden="true"></canvas></div>
           <h2 class="reveal">Have a project<br>in mind?</h2>
           <p class="reveal">Let's connect and build something useful.</p>
         </div>
@@ -353,6 +350,10 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="js/hero3d.js"></script>
+  <script src="js/section3d.js"></script>
+  <script src="js/lines3d.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
