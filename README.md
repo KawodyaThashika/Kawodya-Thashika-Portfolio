@@ -6,7 +6,7 @@ Personal portfolio website of Kawodya Thashika, a Software Technology undergradu
 
 ## Features
 - Light / dark theme toggle with saved preference
-- Animated custom cursor and circuit-trace hero graphic
+- Animated hero particle swarm that morphs ring → helix → wave → vortex → galaxy
 - Filterable project grid
 - Fully responsive, accessibility-aware
 

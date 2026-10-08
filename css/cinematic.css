@@ -1,0 +1,93 @@
+/* =========================================================
+   CINEMATIC BACKGROUND
+   Every section after the hero sits on one fixed particle
+   canvas (js/bg3d.js). Content and layout are unchanged; this
+   file only makes the section backgrounds transparent, gives
+   that area the site's dark palette so the particles read, and
+   lets the cards pick up a little blur.
+   ========================================================= */
+.cine {
+  /* dark palette (same values as [data-theme="dark"]), scoped to this block */
+  --bg: #0A0D12;
+  --bg-elevated: #10151C;
+  --bg-inverted: #05070A;
+  --text: #EAEDE8;
+  --text-muted: #8D968F;
+  --text-inverted: #EAEDE8;
+  --text-inverted-muted: #767F79;
+  --accent: #5C86FF;
+  --accent-2: #F0BE5C;
+  --border: rgba(234, 237, 232, .14);
+  --border-strong: #EAEDE8;
+  --grid-line: rgba(234, 237, 232, .06);
+  --skills-bg: transparent;
+  --skills-text: #EAEDE8;
+  --skills-label: rgba(234, 237, 232, .6);
+  --shadow: 0 18px 44px rgba(0, 0, 0, .45);
+  color-scheme: dark;
+
+  position: relative;
+  background: #04050a;
+  color: var(--text);
+  /* clips the fixed canvas to this block so the hero is untouched */
+  clip-path: inset(0);
+}
+
+.bg3d {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100lvh;
+  display: block;
+  pointer-events: none;
+}
+
+/* keep copy readable over bright particles */
+.cine::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(110% 90% at 50% 50%, rgba(4, 5, 10, .25) 40%, rgba(4, 5, 10, .7) 100%);
+}
+
+.cine > .section,
+.cine > .contact { position: relative; z-index: 1; }
+
+/* sections let the canvas show through */
+.cine .about,
+.cine .dark-section,
+.cine .skills,
+.cine .projects,
+.cine .education,
+.cine .certifications,
+.cine .contact { background: transparent; }
+
+/* the old line-flow background is replaced by the particles */
+.cine .section-lines-3d { display: none; }
+
+/* real cards (they have their own padding): translucent + blur so the swarm shows behind them */
+.cine .skills-grid article,
+.cine .project-card {
+  background: color-mix(in srgb, var(--bg-elevated) 58%, transparent);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* open, line-based blocks keep their original look (no box); a soft shadow keeps the text readable */
+.cine .about-points article,
+.cine .experience-item,
+.cine .education-list article,
+.cine .cert-grid > div,
+.cine .contact-links a {
+  background: none;
+  text-shadow: 0 0 14px rgba(4, 5, 10, .9), 0 0 3px rgba(4, 5, 10, .6);
+}
+
+/* fallback if WebGL is unavailable */
+.cine--static .bg3d,
+.cine--static::before { display: none; }
+.cine--static { background: var(--bg); }
