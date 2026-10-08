@@ -449,9 +449,6 @@ h4,
 .hero {
     min-height: 100vh;
 
-    /* clip the fixed swarm canvas to the hero (sides open to the viewport edge) */
-    clip-path: inset(0 -100vw);
-
     padding-top: 150px;
     padding-bottom: 55px;
 
@@ -480,7 +477,8 @@ h4,
 }
 
 /* The swarm canvas is fixed to the viewport (like the page background) so it can
-   melt into the SEC. 01 ring on scroll; .hero clips it so it never leaks outside. */
+   melt into the SEC. 01 ring on scroll. It sits at z-index -1, so the opaque .cine
+   block below the hero simply paints over it; hero3d.js hides it once the hero is gone. */
 .hero-3d {
     position: fixed;
 

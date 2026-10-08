@@ -307,18 +307,20 @@
 
     // blend look toward bg3d.js values so there is no visible seam
     var smallScreen = window.innerWidth <= 860;
-    var cssOpacity = (smallScreen ? 0.55 : 0.85) + (1 - (smallScreen ? 0.55 : 0.85)) * e;
-    mount.style.opacity = cssOpacity.toFixed(3);
-    uniforms.uOpacity.value = isDark ? baseOpacity + (0.65 - baseOpacity) * e : baseOpacity;
-    uniforms.uSize.value = DPR * (2.8 + (2.6 - 2.8) * e);
+    var cssBase = smallScreen ? 0.75 : 0.85;
+    mount.style.opacity = (cssBase + (1 - cssBase) * e).toFixed(3);
+    // phones on the light theme: ink-coloured dots are tiny on white, so make them bolder
+    var lightBoost = (!isDark && smallScreen) ? 1.0 : 0.0;
+    uniforms.uOpacity.value = isDark ? baseOpacity + (0.65 - baseOpacity) * e : (lightBoost ? 1.0 : baseOpacity);
+    uniforms.uSize.value = DPR * (2.8 + (2.6 - 2.8) * e) * (lightBoost ? 1.7 : 1.0);
 
     // the soft vignette mask opens up as the swarm becomes the full-page background
-    var key = Math.round(e * 200);
+    var key = Math.round(e * 200) + (smallScreen ? 1000 : 0);
     if (key !== maskKey) {
       maskKey = key;
       var m;
-      if (e >= 0.995) {
-        m = "none";
+      if (e >= 0.995 || smallScreen) {
+        m = "none"; // no mask on phones: mobile Safari can blank masked WebGL canvases
       } else {
         var cx = 62 - 12 * e, cy = 42 + 8 * e;
         var s1 = 45 + 120 * e, s2 = 78 + 160 * e;
@@ -355,7 +357,10 @@
 
   var visible = true;
   if ("IntersectionObserver" in window) {
-    new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }, { threshold: 0 }).observe(heroSection);
+    new IntersectionObserver(function (en) {
+      visible = en[0].isIntersecting;
+      mount.style.visibility = visible ? "visible" : "hidden"; // keeps it from showing through transparent parts further down
+    }, { threshold: 0 }).observe(heroSection);
   }
 
   var clock = new THREE.Clock();
